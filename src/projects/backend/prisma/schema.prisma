@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRES_URL")
+}
+
+model Fatura {
+  id                             String   @id @default(cuid())
+  file_fingerprint               String   @unique
+  numero_do_cliente              String
+  numero_da_instalacao           String
+  valor_boleto                   Float
+  data_de_referencia             DateTime
+  data_de_vencimento             DateTime
+  data_de_emissao                DateTime
+  energia_eletrica_kwh           Float
+  energia_eletrica_valor         Float
+  energia_sceee_sem_icms_kwh     Float
+  energia_sceee_sem_icms_valor   Float
+  energia_compensada_gd_kwh      Float
+  energia_compensada_gd_valor    Float
+  contrib_ilum_publica_municipal Float
+  url_chave_acesso               String
+  chave_de_acesso                String
+  historico_de_consumo           Json
+  created_at                     DateTime @default(now())
+  updated_at                     DateTime @default(now())
+}

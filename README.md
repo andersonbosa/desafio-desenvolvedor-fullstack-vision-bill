@@ -16,10 +16,14 @@
 1. Vá até pasta src onde se encontra Makefile [(aqui)](./src/)
 2. Rode `make dev` para inicializar os containers
 3. Caso seja primeira vez iniciando o banco de dados será preciso rodar o comando abaixo para iniciá-lo:
-  ```bash
-  RUN POSTGRES_URL="postgres://psql_user:psql_pass@localhost:5432/lumi_db" pnpm db:first-setup
-  ``` 
+```bash
+POSTGRES_URL="postgres://psql_user:psql_pass@localhost:5432/lumi_db" pnpm db:first-setup
+``` 
 4. Após isso a aplicação frontend estará online no endereço http://localhost:3001
+
+### Cliente de API
+
+- Usar Insomnia para importar a configuração em [insomnia_api_client.json](./insomnia_api_client.json)
 
 ### Planejamento / trabalho futuro
 
@@ -32,7 +36,7 @@ Vou detalhar aqui abaixo as coisas que faltaram na aplicação.
   - Faltou filtros
 - Mais gráficos
 
-### Rascunho de tarefas a serem feitas que não completei.
+#### Rascunho de tarefas a serem feitas que não completei.
 
 ```
 └─ desafio-desenvolvedor-fullstack-vision-bill

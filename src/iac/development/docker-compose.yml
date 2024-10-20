@@ -28,8 +28,8 @@ services:
       - POSTGRES_URL=postgres://psql_user:psql_pass@infra-postgres:5432/lumi_db
     ports:
       - '3000:3000'
-    volumes:
-      - ./../../projects/backend:/app
+    # volumes:
+    #   - ./../../projects/backend:/app
     depends_on:
       - infra-postgres
     healthcheck:
@@ -48,8 +48,8 @@ services:
       - NEXT_PUBLIC_API_URL=http://app-backend:3000
     ports:
       - '3001:3000'
-    volumes:
-      - ./../../projects/frontend:/app
+    # volumes:
+    #   - ./../../projects/frontend:/app
     depends_on:
       - app-backend
 

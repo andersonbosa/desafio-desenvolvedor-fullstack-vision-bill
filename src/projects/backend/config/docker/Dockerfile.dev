@@ -12,4 +12,5 @@ RUN apt-get update -y && apt-get install -y openssl
 
 FROM base AS runner
 USER node
+RUN pnpm i
 CMD [ "pnpm", "run", "start:dev" ]

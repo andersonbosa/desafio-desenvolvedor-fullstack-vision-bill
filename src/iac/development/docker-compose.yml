@@ -45,7 +45,7 @@ services:
       context: ./../../projects/frontend
       dockerfile: config/docker/Dockerfile.dev
     environment:
-      - NEXT_PUBLIC_API_URL=http://app-backend:3000
+      - NEXT_PUBLIC_API_URL=http://localhost:3000
     ports:
       - '3001:3000'
     # volumes:
